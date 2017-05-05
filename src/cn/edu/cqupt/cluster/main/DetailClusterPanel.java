@@ -1,5 +1,6 @@
 package cn.edu.cqupt.cluster.main;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,8 +8,6 @@ import cn.edu.cqupt.cluster.object.ICluster;
 import cn.edu.cqupt.cluster.object.ISpectrumReference;
 import cn.edu.cqupt.cluster.object.Spectrum;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
@@ -81,20 +80,21 @@ class DetailClusterPanel {
 		// 增加按钮及响应事件
 
 		// create buttons
-		//JButton previousPage = new JButton("上一页");
-		//JButton nextPage = new JButton("下一页");
+		JButton previousPage = new JButton("上一页");
+		JButton nextPage = new JButton("下一页");
 		// add buttons to panel
-		//buttonPanel.add(previousPage);
-		//buttonPanel.add(nextPage);
+		buttonPanel.add(previousPage);
+		buttonPanel.add(nextPage);
 		// create button action
 		TurnPageAction previousPageAction = new TurnPageAction(-1); // -1表上一页
 		TurnPageAction nextPageAction = new TurnPageAction(0); // 0 表下一页
 		// associate action with button
-		//previousPage.addActionListener(previousPageAction);
-		//nextPage.addActionListener(nextPageAction);
-
-		tmpPanel1.add(tablePanel, BorderLayout.CENTER);
-		tmpPanel1.add(buttonPanel, BorderLayout.SOUTH);
+		previousPage.addActionListener(previousPageAction);
+		nextPage.addActionListener(nextPageAction);
+		GridLayout layout=new GridLayout(2,1);
+		tmpPanel1.setLayout(layout);
+		tmpPanel1.add(tablePanel);
+		tmpPanel1.add(buttonPanel);
 
 	}
 
@@ -194,20 +194,21 @@ class DetailClusterPanel2 {
 		// 增加按钮及响应事件
 
 		// create buttons
-		//JButton previousPage = new JButton("上一页");
-		//JButton nextPage = new JButton("下一页");
+		JButton previousPage = new JButton("上一页");
+		JButton nextPage = new JButton("下一页");
 		// add buttons to panel
-		//buttonPanel.add(previousPage);
-		//buttonPanel.add(nextPage);
+		buttonPanel.add(previousPage);
+		buttonPanel.add(nextPage);
 		// create button action
 		TurnPageAction previousPageAction = new TurnPageAction(-1); // -1表上一页
 		TurnPageAction nextPageAction = new TurnPageAction(0); // 0 表下一页
 		// associate action with button
-		//previousPage.addActionListener(previousPageAction);
-		//nextPage.addActionListener(nextPageAction);
-
-		tmpPanel1.add(tablePanel, BorderLayout.CENTER);
-		tmpPanel1.add(buttonPanel, BorderLayout.SOUTH);
+		previousPage.addActionListener(previousPageAction);
+		nextPage.addActionListener(nextPageAction);
+		GridLayout layout=new GridLayout(2,1);
+		tmpPanel1.setLayout(layout);
+		tmpPanel1.add(tablePanel);
+		tmpPanel1.add(buttonPanel);
 
 	}
 
